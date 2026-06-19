@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initMobileMenu();
     initScrollAnimations();
+    initProjectFilters();
+    highlightActiveNav();
     loadProjects();
     loadSkills();
 });
@@ -11,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===== NAVIGATION =====
 function initNavigation() {
     const navbar = document.getElementById('navbar');
+    if (!navbar) return;
     
     // Change navbar background on scroll
     window.addEventListener('scroll', function() {
@@ -35,6 +38,21 @@ function initMobileMenu() {
             this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
         });
     }
+}
+
+// ===== ACTIVE NAV LINK =====
+function highlightActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 }
 
 // ===== SCROLL ANIMATIONS =====
@@ -91,6 +109,9 @@ function loadProjects() {
         }
     ];
     
+    // Clear existing content
+    grid.innerHTML = '';
+    
     // Render projects
     projects.forEach(project => {
         const card = document.createElement('div');
@@ -126,6 +147,9 @@ function loadSkills() {
         { name: 'Node.js', level: '55%' }
     ];
     
+    // Clear existing content
+    grid.innerHTML = '';
+    
     skills.forEach(skill => {
         const card = document.createElement('div');
         card.className = 'skill-card';
@@ -141,12 +165,13 @@ function loadSkills() {
         grid.appendChild(card);
     });
 }
+
 // ===== PROJECT FILTERING =====
 function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     
-    if (!filterButtons.length) return;
+    if (!filterButtons.length || !projectCards.length) return;
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -175,9 +200,3 @@ function initProjectFilters() {
         });
     });
 }
-
-// Call this in DOM ready
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing code ...
-    initProjectFilters();
-});
