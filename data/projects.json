@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "description": "A modern, responsive portfolio website built with HTML, CSS, and JavaScript.",
+    "image": "assets/images/projects/project1.jpg",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "category": "web",
+    "demo": "https://zebbastian.github.io/MyPortfolio",
+    "github": "https://github.com/Zebbastian/MyPortfolio"
+  },
+  {
+    "id": 2,
+    "title": "E-commerce Platform",
+    "description": "Full-featured online store with shopping cart and payment integration.",
+    "image": "assets/images/projects/project2.jpg",
+    "tags": ["React", "Node.js", "MongoDB"],
+    "category": "web",
+    "demo": "#",
+    "github": "#"
+  },
+  {
+    "id": 3,
+    "title": "Mobile App UI Design",
+    "description": "Beautiful and modern mobile app design created with Figma.",
+    "image": "assets/images/projects/project3.jpg",
+    "tags": ["Figma", "UI/UX"],
+    "category": "design",
+    "demo": "#",
+    "github": "#"
+  }
+]

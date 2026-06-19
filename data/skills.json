@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "HTML5",
+      "level": 90,
+      "icon": "html5"
+    },
+    {
+      "name": "CSS3",
+      "level": 85,
+      "icon": "css3"
+    },
+    {
+      "name": "JavaScript",
+      "level": 75,
+      "icon": "javascript"
+    },
+    {
+      "name": "Git",
+      "level": 70,
+      "icon": "git"
+    },
+    {
+      "name": "React",
+      "level": 60,
+      "icon": "react"
+    },
+    {
+      "name": "Node.js",
+      "level": 55,
+      "icon": "nodejs"
+    }
+  ]
+}

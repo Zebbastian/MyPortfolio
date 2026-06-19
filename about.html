@@ -3,19 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zebbastian - Portfolio Website" />
-    <title>Zebbastian | Home</title>
-    
-    <!-- Favicon -->
+    <meta name="description" content="About Zebbastian - Web Developer" />
+    <title>Zebbastian | About</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/dark-mode.css" />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -26,8 +19,8 @@
                 <a href="index.html">Zebbastian</a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -40,66 +33,43 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- About Section -->
+    <section class="about-page">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="greeting">Hello, I'm</p>
-                    <h1>Zebbastian</h1>
-                    <p class="tagline">Web Developer & Creative Thinker</p>
-                    <p class="description">
-                        I build exceptional digital experiences with clean code 
-                        and modern design.
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Learn more about who I am</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/images/profile/profile-2x.jpg" alt="Zebbastian" />
+                </div>
+                <div class="about-text">
+                    <h3>Passionate Developer & Creative Thinker</h3>
+                    <p>
+                        Hello! I'm Zebbastian, a dedicated web developer with a passion 
+                        for creating beautiful, functional, and user-friendly websites.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary">View My Work</a>
-                        <a href="assets/docs/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                    <p>
+                        I specialize in front-end development with a focus on clean code, 
+                        responsive design, and exceptional user experiences.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Zebbastian" target="_blank">
-                            <img src="assets/images/icons/github.svg" alt="GitHub" />
-                        </a>
-                        <a href="https://linkedin.com/in/Zebbastian" target="_blank">
-                            <img src="assets/images/icons/linkedin.svg" alt="LinkedIn" />
-                        </a>
-                        <a href="https://twitter.com/Zebbastian" target="_blank">
-                            <img src="assets/images/icons/twitter.svg" alt="Twitter" />
-                        </a>
-                    </div>
+                    <a href="assets/docs/resume.pdf" class="btn btn-primary" download>Download Resume</a>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/images/profile/profile.jpg" alt="Zebbastian" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Skills</h2>
-                <p>Technologies I work with</p>
-            </div>
-            <div class="skills-grid" id="skillsGrid">
-                <!-- Skills loaded from data/skills.json -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="featured-projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Some of my recent work</p>
-            </div>
-            <div class="projects-grid" id="featuredProjects">
-                <!-- Projects loaded from data/projects.json -->
-            </div>
-            <div class="text-center">
-                <a href="projects.html" class="btn btn-primary">View All Projects</a>
             </div>
         </div>
     </section>
@@ -138,7 +108,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/dark-mode.js"></script>

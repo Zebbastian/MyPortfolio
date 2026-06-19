@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /assets/images/private/
+Sitemap: https://zebbastian.github.io/MyPortfolio/sitemap.xml

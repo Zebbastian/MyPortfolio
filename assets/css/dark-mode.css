@@ -1,0 +1,57 @@
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background: var(--darker);
+    color: var(--light);
+}
+
+body.dark-mode .navbar {
+    background: var(--darker);
+}
+
+body.dark-mode .section-header p {
+    color: var(--gray);
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .service-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form-wrapper {
+    background: var(--dark);
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .skill-card p,
+body.dark-mode .service-card p,
+body.dark-mode .project-card p {
+    color: var(--gray);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: var(--dark);
+    color: var(--light);
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+body.dark-mode .footer {
+    background: var(--darker);
+}
+
+body.dark-mode .project-tags span {
+    background: var(--dark);
+    color: var(--gray);
+}
+
+body.dark-mode .social-links a {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .social-links a:hover {
+    background: var(--primary);
+}
