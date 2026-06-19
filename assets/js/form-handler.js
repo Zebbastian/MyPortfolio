@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Show success (in production, this would send to a server)
-            showMessage(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`, 'success');
+            // Show success message
+            showMessage(`✅ Thank you ${name}! Your message has been sent. I'll get back to you soon.`, 'success');
             
             // Reset form
             form.reset();
@@ -38,7 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showMessage(text, type) {
     const messageDiv = document.getElementById('formMessage');
-    messageDiv.innerHTML = `<p class="form-${type}">${text}</p>`;
+    const isSuccess = type === 'success';
+    
+    messageDiv.innerHTML = `
+        <div class="form-${type}" style="
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 1rem;
+            background: ${isSuccess ? '#d4edda' : '#f8d7da'};
+            color: ${isSuccess ? '#155724' : '#721c24'};
+            border: 1px solid ${isSuccess ? '#c3e6cb' : '#f5c6cb'};
+        ">
+            ${text}
+        </div>
+    `;
+    
     messageDiv.style.display = 'block';
     
     // Auto hide after 5 seconds

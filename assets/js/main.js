@@ -141,3 +141,43 @@ function loadSkills() {
         grid.appendChild(card);
     });
 }
+// ===== PROJECT FILTERING =====
+function initProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (!filterButtons.length) return;
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.dataset.filter;
+            
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// Call this in DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    initProjectFilters();
+});
